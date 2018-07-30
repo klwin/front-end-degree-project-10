@@ -1,0 +1,236 @@
+/* ---- CSS RESET ---- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* lightbox hacks */
+#lightbox-container-image-data-box {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/** uncomment to remove lightbox captions 
+ *
+#lightbox-container-image-data-box {
+  display: none !important;
+} 
+ *
+**/
+
+/* Layout CSS */
+body {
+	background-color: #fcfcfc;
+	font-family: 'Roboto', sans-serif;
+}
+h1 {
+	padding: 1em 2em;
+	color: #404a51;
+	font-size: 1.5em;
+	float: left;
+}
+input {
+	width: 200px;
+	display: inline-block;
+	padding: 15px;
+	border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    box-sizing: border-box;
+    float: left;
+    margin: 2em 3em;
+}
+.container {
+	padding: 2em;
+}
+
+/* Card CSS */
+.card {
+	border: 2px solid #dfdfdf;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	padding: 1em;
+	background-color: #fff;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.info {
+	align-self: center;
+}
+.name {
+	text-transform: capitalize;
+	color: #404a51;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0.3em 0;
+}
+.email, .phone, .birthday {
+	padding: 0.3em 0;
+	color: #8e9397;
+}
+.city, .location {
+	text-transform: capitalize;
+	padding: 0.3em 0;
+	color: #8e9397;
+}
+.profile-pic {
+	border-radius: 50%;
+}
+
+/* Modal CSS */
+.bg-modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-content {
+	width: 400px;
+	height: 500px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.modal-content .close {
+	font-size: 2em;
+	cursor: pointer;
+	padding: 10px;
+	float: right;
+}
+.modal-content .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.right-button, .left-button {
+	float: right;
+	padding: 15px;
+	padding-top: 200px;
+	font-size: 2em;
+	cursor: pointer;
+}
+.left-button {
+	float: left;
+}
+.modal-content p {
+	padding-top: 1em;
+}
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#404a51;
+  height: 1px;
+}
+.hide {
+	display: none;
+}
+
+/* Mobile CSS */
+@media screen and (min-width: 320px) {
+	.profile-pic {
+		width: 80px;
+		height: 80px;
+	}
+	.name {
+		font-size: 0.8em;
+	}
+	.email, .phone, .birthday, .city, .location {
+		font-size: 0.5em;
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		grid-column-gap: 1em;
+		grid-row-gap: 1em;
+	}
+	input {
+		float: left;
+	}
+	.profile-pic {
+		width: 100px;
+		height: 100px;
+	}
+	.name {
+		font-size: 1.2em;
+	}
+	.email, .phone, .birthday, .city, .location {
+		font-size: 0.8em;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 1em;
+		grid-row-gap: 1em;
+	}
+	input {
+		float: right;
+	}
+	.profile-pic {
+		width: 120px;
+		height: 120px;
+	}
+	.name {
+		font-size: 1.3em;
+	}
+	.email, .phone, .birthday, .city, .location {
+		font-size: 0.9em;
+	}
+}
+
+
+
+
